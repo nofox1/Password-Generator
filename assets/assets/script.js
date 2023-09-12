@@ -11,9 +11,8 @@ function settings() {
     char = [];
     length =  parseInt(prompt('How long would you like your password pick 8 - 128 characters.'));
 
-    if (isNaN(length) || length < 8 || length > 128){
-      alert('Pick bewteen 8 - 128')
-      return false;
+    while (isNaN(length) || length < 8 || length > 128){
+      length = prompt('Pick bewteen 8 - 128');
     } 
 
     if (confirm('Would you like any lowercase letters?')){
